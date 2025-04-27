@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
-import Home from './pages/HomePage';
+
+import Home from './components/Hero';
 import Projects from './components/projects/Projects'; // Nueva ruta
 import About from './components/About';
 import Contact from './components/Contact';
