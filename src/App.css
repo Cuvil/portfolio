@@ -1,0 +1,127 @@
+/* Estilos generales */
+
+/* Efecto de cursor personalizado */
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="%2300ffff" stroke-width="1.5"/></svg>') 8 8, auto;
+}
+
+.nav-link:hover {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%2300ffff" d="M12 2L4 12l8 10 8-10z"/></svg>') 12 2, pointer;
+}
+
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #282c34;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+
+.skills-section {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-icon {
+  margin-bottom: 1rem;
+}
+
+.skill-level-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.skill-level-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.skill-tooltip {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.skill-tooltip:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #333;
+}
+
+/* Asegura que todas las secciones respeten el navbar */
+section {
+  scroll-margin-top: 80px; /* Para anclas suaves */
+  padding-top: 80px; /* Espacio inicial */
+  min-height: calc(100vh - 80px); /* Ajuste de altura */
+}
+
+/* Hero necesita ajuste especial */
+.hero-section {
+  padding-top: 80px;
+  height: 100vh;
+  box-sizing: border-box;
+}
